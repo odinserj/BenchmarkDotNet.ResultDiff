@@ -51,7 +51,13 @@ namespace BenchmarkDotNet.ResultDiff
             {
                 foreach (var pair in pairs)
                 {
-                    writer.WriteLine("## " + pair.OldFile.Name.Replace("-report.csv", ""));
+                    writer.WriteLine("## Performance Comparison");
+                    writer.WriteLine();
+
+                    writer.WriteLine($"Running on `{Environment.MachineName}` with {Environment.ProcessorCount} cores.");
+                    writer.WriteLine();
+
+                    writer.WriteLine("### " + pair.OldFile.Name.Replace("-report.csv", ""));
                     writer.WriteLine();
 
                     Console.WriteLine("Analyzing pair " + pair.OldFile.Name);
