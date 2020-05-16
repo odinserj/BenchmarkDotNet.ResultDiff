@@ -33,13 +33,15 @@ namespace BenchmarkDotNet.ResultDiff
             var columns = new List<string>
             {
                 "Method",
-                "FileName",
-                "N",
+                "pool",
+                "counts",
+                "WPS Q1",
+                "WPS Median",
+                "WPS Q2",
                 "Mean",
-                "Gen 0/1k Op",
-                "Gen 1/1k Op",
-                "Gen 2/1k Op",
-                "Allocated Memory/Op"
+                "Error",
+                "StdDev",
+                "Median"
             };
 
             var oldDirName = oldDir.Name != newDir.Name ? oldDir.Name : oldDir.Parent.Name;
