@@ -37,7 +37,7 @@ namespace BenchmarkDotNet.ResultDiff
                 "counts",
                 "WPS Q1",
                 "WPS Median",
-                "WPS Q2",
+                "WPS Q3",
                 "Mean",
                 "Error",
                 "StdDev",
@@ -121,7 +121,7 @@ namespace BenchmarkDotNet.ResultDiff
                             writer.Write("| **New** |");
                             foreach (var effectiveHeader in effectiveHeaders)
                             {
-                                if (effectiveHeader == "Method" || effectiveHeader == "N" || effectiveHeader == "FileName")
+                                if (effectiveHeader == "Method" || effectiveHeader == "N" || effectiveHeader == "FileName" || effectiveHeader == "pool" || effectiveHeader == "counts")
                                 {
                                     writer.Write("\t|");
                                 }
